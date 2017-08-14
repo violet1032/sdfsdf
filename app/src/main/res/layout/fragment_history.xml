@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f4f4f4">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/monitoring_bg" />
+
+        <include
+            android:id="@+id/monitoring_center_title_bar"
+            layout="@layout/monitoring_center_title_bar"></include>
+
+        <LinearLayout
+            android:id="@+id/history_channel_data_top_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+          >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/history_channel_data_high_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textColor="@color/white"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/history_channel_data_type_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/history_channel_data_high_tv"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/history_channel_data_high_tv"
+                        android:text="℃"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/history_channel_data_high_tv"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/history_info_top_high"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/history_channel_data_low_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textColor="@color/white"
+                        android:textSize="50sp" />
+                    <TextView
+                        android:id="@+id/history_channel_data_type_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/history_channel_data_low_tv"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@+id/history_channel_data_low_tv"
+                        android:text="℃"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/history_channel_data_low_tv"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/history_info_top_low"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/history_list_btn"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_round_monirotning"
+            android:text="列表"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/history_fix_map_btn"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/history_list_btn"
+            android:background="@drawable/shape_round_monirotning_click"
+            android:text="固定曲线"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_rv_states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scrollbars="none" />
+        <TextView
+            android:id="@+id/tv_record_count"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/history_time_default_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/history_search_time_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/search_time_day"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/history_line_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/history_search_time_day"
+                android:layout_alignRight="@+id/history_search_time_day"
+                android:layout_below="@id/history_search_time_day"
+                android:background="@color/channel_status_off" />
+
+            <TextView
+                android:id="@+id/history_search_time_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/history_line_img2"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/search_time_week"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/history_search_time_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/history_time_default_rl"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/history_time_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:id="@+id/history_start_time_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/search_time_start_time"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/history_start_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="2016-06-04 16:17"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/gps_arrow2" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/history_line_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@id/history_start_time_ll"
+                    android:layout_alignRight="@id/history_start_time_ll"
+                    android:layout_below="@id/history_start_time_ll"
+                    android:background="@color/channel_status_off" />
+
+                <LinearLayout
+                    android:id="@+id/history_end_time_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/history_line_img"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/search_time_end_time"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/history_end_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="2016-06-04 16:17"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/gps_arrow2" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/history_search_time_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/history_time_rl"
+                android:layout_alignTop="@id/history_time_rl"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/history_time_rl"
+                android:background="@drawable/shape_round_monirotning"
+                android:text="@string/search_time_search_btn"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+            <TextView
+                android:id="@+id/history_channel_map_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_25"
+                android:visibility="gone"
+                android:layout_marginTop="6dp"
+                android:text="温度"
+                android:textSize="@dimen/text_size_12" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:padding="30dp"
+            android:id="@+id/history_fix_map_linechart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="5dp"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <ListView
+            android:id="@+id/monitoring_data_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/history_no_data_hint_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_hint"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</FrameLayout>

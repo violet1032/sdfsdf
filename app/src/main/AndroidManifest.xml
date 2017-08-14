@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xcinfo.xc_blueteeth_android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 发送短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- 二维码相关权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".common.config.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity
+            android:name=".LaunchActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".bluetoothtest.BlueToothActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".servicetest.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".servicetest.ServiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" />
+        <activity
+            android:name=".main.activity.searchdevice.SearchDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.activity.EditGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.activity.ChooseDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.activity.MonitoringDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.dialog.DialogEditTeam"
+            android:screenOrientation="portrait"
+            android:theme="@style/WidgetBottomDialog" />
+        <activity
+            android:name=".main.monitor.dialog.NewGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialog" />
+        <activity
+            android:name=".main.device_class.DeviceClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.activity.DeviceManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.monitor.dialog.EditTelDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/WidgetBottomDialog" />
+
+        <service
+            android:name=".common.bluetooth.service.BlueToothCommuicationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".main.activity.manngerlistactivity.ManngerSelecterActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name=".main.activity.CommonScanActivity"></activity>
+    </application>
+
+</manifest>

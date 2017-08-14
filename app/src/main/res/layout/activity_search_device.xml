@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_device"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation="vertical"
+    tools:context=".main.activity.searchdevice.SearchDeviceActivity"
+    android:weightSum="1">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_gravity="top"
+        android:src="@drawable/search_device_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/startblue"
+                android:background="@drawable/selecter_add_device"
+                android:layout_marginTop="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <ProgressBar
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:id="@+id/progressbar_searchdevice"
+                android:indeterminateDrawable="@drawable/progress_animation"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="@string/tv_search_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:text="@string/tv_search_guide_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_qr_scan"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_qr"/>
+    <TextView
+        android:text="@string/tv_qr_connect"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:text="@string/tv_qr_connect_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/reciclerview_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/add_device_white"
+            android:background="@drawable/add_device_pressed"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/none_device_guide"
+            android:layout_below="@id/add_device_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/none_device_guide_second"
+            android:layout_below="@id/none_device_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

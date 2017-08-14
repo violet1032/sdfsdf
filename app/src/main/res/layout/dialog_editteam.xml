@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_rounded_white"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_editteam_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:text="@string/edit_team_title"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/text_size_16"/>
+
+    <TextView
+        android:id="@+id/dialog_editteam_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5"
+        android:text="@string/edit_team_hint"
+        android:textColor="@color/frenchgrey_3"/>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/space_6"
+        android:background="@drawable/shape_grayborder_square"
+        android:paddingBottom="@dimen/space_6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="@dimen/space_6">
+
+        <EditText
+            android:paddingLeft="2dp"
+            android:id="@+id/dialog_editteam_edTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/space_5"
+
+            android:layout_toLeftOf="@+id/dialog_editteam_clear"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/dialog_editteam_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/device_more_name_clean"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@color/frenchgrey_2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_editteam_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_white"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_30"
+            android:paddingRight="@dimen/space_30"
+            android:paddingTop="@dimen/space_10"
+            android:text="取消"
+            android:textSize="@dimen/text_size_16"/>
+
+        <ImageView
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/frenchgrey_2"/>
+
+        <Button
+            android:id="@+id/dialog_editteam_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_white"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_30"
+            android:paddingRight="@dimen/space_30"
+            android:paddingTop="@dimen/space_10"
+            android:text="确定"
+            android:textSize="@dimen/text_size_16"/>
+    </LinearLayout>
+
+
+</LinearLayout>

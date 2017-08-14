@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/root_layout"
+    android:focusable="false"
+    android:clickable="false"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/grid_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+    <!--此控件包括了通道类型名+值+单位-->
+    <TextView
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/tv_detail_grid"
+        android:textSize="@dimen/textview_main_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

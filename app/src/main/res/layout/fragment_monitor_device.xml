@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xcinfo.xc_blueteeth_android.main.activity.monitor.fragment.MonitorDeviceFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+  <!--<include-->
+      <!--layout="@layout/top_search_layout"-->
+      <!--/>-->
+<RelativeLayout
+    android:layout_marginTop="@dimen/layout_magin_top"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_height_35dp">
+    <TextView
+        android:id="@+id/tv_device_group"
+        android:text="全部设备"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/textview_main_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/detector_small_triangle"
+        android:layout_alignBottom="@+id/tv_device_group"
+        android:layout_toRightOf="@+id/tv_device_group"
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+</RelativeLayout>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/monitor_recyclerview"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>

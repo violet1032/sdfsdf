@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_10">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:text="无线水表1号设备"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_17"/>
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/listitem_alert_equipment_name"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="温度通道"
+                android:textSize="@dimen/text_size_12"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_5"
+            android:layout_marginTop="@dimen/space_3">
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(研发部)"
+                android:textColor="#555555"
+                android:textSize="@dimen/text_size_13"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_alertinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温度高于最大值预警10次"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报警次数："/>
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_alertTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连续N次"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理状态："/>
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_solveStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预警已取消"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发生时间："
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/listitem_alert_equipment_alertTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016年6月1日  11:53"
+                android:textColor="#999999"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

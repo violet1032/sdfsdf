@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/listitem_monitoring_equipment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8sp"
+            android:text="预警" />
+
+        <TextView
+            android:id="@+id/listitem_monitoring_equipment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/listitem_monitoring_equipment_status"
+            android:text="设备一号" />
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/recycler_detector_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+         />
+
+
+</LinearLayout>

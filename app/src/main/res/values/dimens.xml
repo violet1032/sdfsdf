@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">2dp</dimen>
+    <dimen name="space_5">5.0sp</dimen>
+    <dimen name="space_15">15.0sp</dimen>
+    <dimen name="space_50">50.0sp</dimen>
+    <dimen name="margin_left_12_dp">12dp</dimen>
+    <dimen name="device_english_front_small">10sp</dimen>
+    <!--布局宽高参照大小-->
+    <dimen name="layout_height_35dp">35dp</dimen>
+    <dimen name="layout_magin_top">5dp</dimen>
+
+    <!--设备管理页面-->
+    <dimen name="space_between">0.3dp</dimen>
+    <!--字体大小参照-->
+    <dimen name="layout_height_comman">45dp</dimen><!--固定的基本的layout栏的高度-->
+    <dimen name="textview_small_note">12sp</dimen><!--小字提示-->
+    <dimen name="textview_main_body">14sp</dimen><!--正文/按钮文字-->
+    <dimen name="textview_small_title">16sp</dimen><!--小标题-->
+    <dimen name="textview_appbar">20sp</dimen><!--APPbar-->
+</resources>

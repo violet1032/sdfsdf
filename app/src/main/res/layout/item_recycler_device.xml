@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:gravity="center_vertical"
+    android:layout_width="300dp"
+    android:layout_height="60dp">
+    <LinearLayout
+
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearlayout_deviceinfo"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Mercy"
+
+            android:id="@+id/bluetooth_device_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textview_appbar"/>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:text="12:56:12:56"
+            android:id="@+id/bluetooth_device_address"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/linearlayout_deviceinfo"
+        android:id="@+id/linearlayout_loadingconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <ProgressBar
+            android:indeterminateTint="@color/blue_main_ui"
+            android:id="@+id/procressbar_connect"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_connect"
+            android:textSize="15sp"
+            android:text="正在连接..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+<LinearLayout
+    android:paddingBottom="10dp"
+    android:gravity="right|bottom"
+    android:orientation="vertical"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <!--<TextView-->
+        <!--android:text="状态：未连接"-->
+        <!--android:id="@+id/tv_connect_status"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <Button
+        android:textColor="@color/white"
+        android:background="@drawable/selecter_connected_device"
+        android:id="@+id/btn_connect"
+        android:layout_width="50dp"
+        android:layout_height="25dp" />
+</LinearLayout>
+
+</RelativeLayout>

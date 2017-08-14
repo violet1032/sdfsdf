@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#808080</color> <!-- 灰色 -->
+    <color name="white">#ffffff</color> <!-- 白色 -->
+    <color name="full_transparent">#00000000</color>
+    <color name="transparent">#0000</color><!--透明色-->
+    <color name="main_content_bg">#10000000</color>
+    <color name="main_bottom_text_normal">#ff847d7b</color>
+    <color name="main_bottom_text_select">#ff333333</color>
+    <color name="main_bottom_bg">#11000000</color>
+
+    <color name="blue_main_ui">#2c98e6</color><!--蓝色-->
+    <color name="yellow_abnormal">#fbc900</color><!--黄色 异常-->
+    <color name="green_normal">#5ec95b</color><!--绿色 正常-->
+    <color name="main_balck">#333333</color><!--深黑色 主数据-->
+    <color name="blue_title_bg">#2c98e6</color><!--标题栏蓝色背景-->
+    <color name="main_black">#333333</color><!--深黑色 主数据-->
+    <color name="sub_hint_balck">#666666</color><!--浅黑色-->
+    <color name="blue_white">#cc0073ff</color>
+    <color name="blue_statusbar">#1478e3</color>
+
+    <!--监控-->
+    <color name="details_bottom_blue">#006ebc</color>
+    <color name="detector_status_normal">#5ec95b</color>
+    <color name="detector_status_alert">#ef5b57</color>
+
+    <!--设备管理页面的灰色字体-->
+    <color name="device_control_gray_text">#6f6f6f</color>
+    <!--实时页面通道状态-->
+    <color name="channel_status_normal">#5ec95b</color>
+    <color name="channel_status_abnormal">#eeb131</color>
+    <color name="channel_status_warning">#ef5b57</color>
+    <color name="channel_status_off">#c9c9ca</color>
+    <!--扫码连接-->
+    <color name="scan_bg">#7f000000</color>
+</resources>

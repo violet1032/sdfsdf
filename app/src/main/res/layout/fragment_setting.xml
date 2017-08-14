@@ -1,0 +1,271 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.fragment.SettingFragment"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/title_bar"
+            />
+
+
+        <TextView
+            android:textColor="@color/blue_white"
+            android:paddingTop="10dp"
+            android:background="@color/white"
+            android:textSize="@dimen/textview_small_title"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="设置报警方式"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <TextView
+                    android:text="振动"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/btn_toggle_1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    toggle:tbOnColor="@color/channel_status_normal"
+                    toggle:tbOffColor="@color/channel_status_off"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/channel_status_off"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_between" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <TextView
+                    android:text="响铃"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/btn_toggle_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    toggle:tbOnColor="@color/channel_status_normal"
+                    toggle:tbOffColor="@color/channel_status_off"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_between" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="通知号码:"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:id="@+id/ed_tel"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <TextView
+                    android:text="发送短信"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/btn_toggle_3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    toggle:tbOnColor="@color/channel_status_normal"
+                    toggle:tbOffColor="@color/channel_status_off"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:background="@color/channel_status_off"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_between" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/blue_white"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingTop="10dp"
+                android:textSize="@dimen/textview_small_title"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:text="上传数据"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_uploaddata"
+                   android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/icon_refresh"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <TextView
+                android:text="自动上传"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/btn_toggle_4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                toggle:tbOnColor="@color/channel_status_normal"
+                toggle:tbOffColor="@color/channel_status_off"
+                android:layout_centerInParent="true"
+                android:layout_width="50dp"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+        <ImageView
+            android:background="@color/channel_status_off"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_between" />
+        <TextView
+            android:textColor="@color/blue_white"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/textview_small_title"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="显示设置"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <TextView
+                android:text="华氏度显示"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/btn_toggle_5"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                toggle:tbOnColor="@color/channel_status_normal"
+                toggle:tbOffColor="@color/channel_status_off"
+                android:layout_centerInParent="true"
+                android:layout_width="50dp"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:background="@color/channel_status_off"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp" />
+        <!--检查更新-->
+        <RelativeLayout
+            android:id="@+id/check_version"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_comman">
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/check_newversion_personal_center"
+                    android:layout_width="18sp"
+                    android:layout_height="18sp" />
+                <TextView
+                    android:id="@+id/tv_checkvision"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:gravity="center"
+                    android:text="@string/check_version"
+                    android:textSize="@dimen/textview_main_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:text="1.0"
+                android:textSize="@dimen/textview_main_body"
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_version_name"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

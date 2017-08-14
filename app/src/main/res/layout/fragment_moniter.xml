@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.fragment.MoniterFragment">
+   <include
+       layout="@layout/title_bar"
+       />
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="@string/btn_monitor_device"
+                android:textSize="@dimen/textview_small_title"
+                android:textColor="@color/main_black"
+                android:background="@drawable/btn_unselected_shape"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:id="@+id/btn_monitor_device"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btn_waring_info"
+                android:text="@string/btn_waring_info"
+                android:textColor="@color/main_black"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/btn_unselected_shape"
+                android:gravity="center"
+                android:textSize="@dimen/textview_small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/main_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f4f4f4"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/monitoring_bg"/>
+
+        <include
+            layout="@layout/monitoring_center_title_bar"/>
+
+        <LinearLayout
+            android:id="@+id/current_channel_data_top_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp">
+        <!--值-->
+                <TextView
+                    android:id="@+id/current_channel_data_high_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:text="N/A"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"/>
+                <!--单位-->
+                <TextView
+                    android:id="@+id/current_channel_data_type_unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/current_channel_data_high_tv"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/current_channel_data_high_tv"
+
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/current_channel_data_high_tv"
+                    android:layout_centerHorizontal="true">
+                    <!--类型-->
+                    <TextView
+                        android:id="@+id/current_channel_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/current_channel_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_info_zhuangtai"/>
+
+            <TextView
+                android:id="@+id/channel_data_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/current_channel_tag1"
+                android:text=""/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/current_list_btn"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_round_monirotning"
+            android:text="@string/current_text_5"
+            android:textSize="12dp"/>
+
+        <Button
+            android:id="@+id/current_fix_map_btn"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/current_list_btn"
+            android:background="@drawable/shape_round_monirotning_click"
+            android:text="固定曲线"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/current_rv_states"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_time_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_lineChart_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            android:text="温度"
+            android:textSize="@dimen/textview_small_note"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/channel_fix_map_linechart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:visibility="gone"/>
+        <ListView
+            android:id="@+id/channel_data_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/current_no_data_hint_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/current_no_data_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/no_data_hint"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#e5e5e5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

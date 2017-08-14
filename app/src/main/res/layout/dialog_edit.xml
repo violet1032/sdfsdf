@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上限值" />
+
+        <EditText
+            android:layout_marginRight="10dp"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:background="@drawable/shape_max_min_value"
+            android:digits="1234567890."
+            android:id="@+id/editTextmax"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" >
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/channel_status_off"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_between" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下限值" />
+
+        <EditText
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:cursorVisible="true"
+            android:background="@drawable/shape_max_min_value"
+            android:digits="1234567890."
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/editTextmin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" >
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+</LinearLayout>

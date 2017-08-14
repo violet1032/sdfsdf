@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b0000000"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/popwindow_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="我的分组"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview_small_note" />
+
+        <ImageView
+            android:id="@+id/popwindow_title_divider_right"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_5"
+            android:layout_toRightOf="@id/popwindow_title"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/popwindow_allDetector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:padding="@dimen/space_5"
+        android:text="全部设备"
+        android:textColor="@color/blue_main_ui"
+        android:textSize="@dimen/textview_main_body" />
+
+    <ListView
+        android:id="@+id/popwindow_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/popwindow_bt"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_round_popwindow"
+        android:text="编辑我的分组"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textview_small_note" />
+
+</LinearLayout>

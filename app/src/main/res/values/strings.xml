@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">冷链蓝牙</string>
+    <string name="app_name_en">app_name_en</string>
+    <string name="loading_eg">loading</string>
+    <string name="minoter">监控</string>
+    <string name="home">主页</string>
+    <string name="setting">设置</string>
+    <string name="normal_device">正常设备</string>
+    <string name="error_device">报警设备</string>
+    <string name="exception_device">异常设备</string>
+    <string name="offline_device">离线设备</string>
+    <string name="normal_device_english">Normal equipment</string>
+    <string name="tai">台</string>
+
+    <!--    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/full_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>-->
+
+    <style name="text_l_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 蓝牙系统设置端所用的字段-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_to_friends">分享给好友</string>
+    <string name="feedback">反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="check_version">蓝牙设备升级</string>
+    <string name="clear_cache">清除缓存</string>
+
+    <!--监控页面-->
+    <string name="btn_monitor_device">监测设备</string>
+    <string name="btn_control_device">控制设备</string>
+    <string name="btn_waring_info">报警信息</string>
+    <string name="monitoring_details_text_current">实时</string>
+    <string name="monitoring_details_text_history">历史</string>
+    <string name="monitoring_details_text_warning">报警</string>
+    <string name="current_info_zhuangtai">状态：</string>
+    <string name="current_text_5">列表</string>
+    <string name="no_data_hint">暂无数据</string>
+    <string name="history_info_top_high">最高</string>
+    <string name="history_info_top_low">最低</string>
+    <string name="search_time_day">一天</string>
+    <string name="search_time_week">一周</string>
+    <string name="search_time_start_time">从</string>
+    <string name="search_time_end_time">到</string>
+    <string name="search_time_search_btn">查询</string>
+    <string name="tv_add_group">添加分组</string>
+    <string name="edit_team_title">编辑分组</string>
+    <string name="edit_team_hint">请输入新的分组名称</string>
+
+    <!--蓝牙搜索界面-->
+    <string name="tv_search_guide">搜索附近设备</string>
+    <string name="tv_search_guide_english">Search nearby equipment</string>
+    <string name="none_device_guide">亲！您的手机没有配对任何蓝牙设备</string>
+    <string name="none_device_guide_second">请配对后再试</string>
+    <string name="tv_qr_connect">扫码连接</string>
+    <string name="tv_qr_connect_english">Connect by QRcode</string>
+</resources>
